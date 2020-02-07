@@ -5,6 +5,7 @@ import java.util.List;
 import org.junit.runner.RunWith;
 
 import cucumber.api.DataTable;
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -12,6 +13,39 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 public class StepDefinition {
+	
+	
+	  @Given("^The test to be run on Chrome browser$")
+	    public void the_test_to_be_run_on_chrome_browser() throws Throwable {
+	      System.out.println("Write the code for Chrome driver");
+	    }
+
+	    @When("^The browser is triggered by the user$")
+	    public void the_browser_is_triggered_by_the_user() throws Throwable {
+	    	System.out.println("Invoke the Chrome driver");
+	    }
+	    
+	    @And("^Verify the Chrome browser is opened$")
+	    public void verify_the_chrome_browser_is_opened() throws Throwable {
+	    	System.out.println("Chrome broswer is opened");
+	        
+	    }
+
+	    @And("^clear the cache$")
+	    public void clear_the_cache() throws Throwable {
+	    	System.out.println("Cache cleared successfully");
+	    }
+
+	    @Then("^Enter the Bank URL$")
+	    public void enter_the_bank_url() throws Throwable {
+	    	System.out.println("Successfully entered URL www.atombank.co.uk");
+	    }
+
+	   
+	    @And("^Verify the Landing page is loaded$")
+	    public void verify_the_landing_page_is_loaded() throws Throwable {
+	    	System.out.println("Landing page loaded successfully");
+	    }
 
 	@Given("^User is on the Banks Landing page$")
 	public void user_is_on_the_banks_landing_page() throws Throwable {
