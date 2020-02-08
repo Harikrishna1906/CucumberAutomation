@@ -11,6 +11,10 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import cucumber.api.junit.Cucumber;
 
+
+
+
+
 @RunWith(Cucumber.class)
 public class StepDefinition {
 	
@@ -47,11 +51,12 @@ public class StepDefinition {
 	    	System.out.println("Landing page loaded successfully");
 	    }
 
-	@Given("^User is on the Banks Landing page$")
+	/*@Given("^User is on the Banks Landing page$")
 	public void user_is_on_the_banks_landing_page() throws Throwable {
 		System.out.println("User on the landing page");
+		
+	}*/
 
-	}
 
 	/*
 	 * @When("^User enters the valid Username and Password$") public void

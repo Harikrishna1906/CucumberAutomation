@@ -14,7 +14,7 @@ public class UsingHooks {
 	
 	@After("@MobileTest")
 	public void AfterExecution() {
-		System.out.println("Hooks runs when & where required before the scenarios");
+		System.out.println("Hooks runs when & where required After the scenarios");
 		
 	}
 	
