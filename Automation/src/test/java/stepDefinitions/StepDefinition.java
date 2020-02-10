@@ -51,11 +51,11 @@ public class StepDefinition {
 	    	System.out.println("Landing page loaded successfully");
 	    }
 
-	/*@Given("^User is on the Banks Landing page$")
-	public void user_is_on_the_banks_landing_page() throws Throwable {
-		System.out.println("User on the landing page");
-		
-	}*/
+	    @Given("^User is on the Banks Landing page$")
+	    public void user_is_on_the_banks_landing_page() throws Throwable {
+		    System.out.println("User on the landing page");
+
+	    }
 
 
 	/*
