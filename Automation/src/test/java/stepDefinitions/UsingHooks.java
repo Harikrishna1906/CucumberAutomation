@@ -1,9 +1,10 @@
 package stepDefinitions;
 
+import Cucumber.Automation.Base;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 
-public class UsingHooks {
+public class UsingHooks extends Base {
 	
 	@Before("@MobileTest")
 	public void beforeExecution() {
@@ -17,6 +18,20 @@ public class UsingHooks {
 		System.out.println("Hooks runs when & where required After the scenarios");
 		
 	}
+	
+	
+	@After("@Addtocart")
+	public void AfterAddtocart() {
+		driver.close();
+		
+	}
+	
+	@After("@SeleniumTest")
+	public void SeleniumTest() {
+		driver.close();
+		
+	}
+	
 	
 	
 	@Before("@WebTest")

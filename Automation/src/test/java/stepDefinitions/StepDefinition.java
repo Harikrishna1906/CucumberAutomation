@@ -4,19 +4,18 @@ import java.util.List;
 
 import org.junit.runner.RunWith;
 
+import Cucumber.Automation.Base;
 import cucumber.api.DataTable;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import cucumber.api.junit.Cucumber;
-
-
-
-
+import pageObjects.Homepage;
 
 @RunWith(Cucumber.class)
-public class StepDefinition {
+public class StepDefinition extends Base{
+	Homepage h; //= new Homepage(driver);
 	
 	
 	  @Given("^The test to be run on Chrome browser$")
@@ -107,6 +106,31 @@ public class StepDefinition {
 	        System.out.println(username);
 	        System.out.println(password);
 	    }
+	 
+	 
+	 @Then("^\"([^\"]*)\" results should be displayed$")
+		public void something_results_should_be_displayed(String strArg1) throws Throwable {
+		 
+		 h = new Homepage(driver);
+
+			String vegetable = h.vegetable().getText();
+			System.out.println(vegetable);
+
+			if (h.vegetable().getText().contains(strArg1)) {
+
+				System.out.println("The product matches with the " + strArg1);
+
+			} else {
+
+				System.out.println("The product does not match with the " + strArg1);
+
+			}
+
+			
+		}
+	 
+	
+
 
 
 }
