@@ -8,7 +8,7 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 	features ="src\\test\\java\\features",
-	glue="stepDefinitions", tags="@Addtocart", monochrome=true, strict=true,
+	glue="stepDefinitions", tags="@Addtocart, @SmokeTest, @MobileTest, @SeleniumTest", monochrome=true, strict=true,
 	plugin = {"pretty", "html:target/cucumber", "json:target/cucumber.json", "junit:target/cukes.xml"}
 )
 
